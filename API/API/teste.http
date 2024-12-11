@@ -1,0 +1,34 @@
+### Testar a raiz do projeto
+GET http://localhost:5208
+
+### Cadastrar aluno
+POST http://localhost:5208/api/aluno/cadastrar
+Content-Type: application/json
+{
+    "Nome": "Carolina",
+    "Sobrenome": "Dobjanski"
+}
+
+### Cadastrar imc
+POST http://localhost:5208/api/imc/cadastrar
+Content-Type: application/json
+{
+    "Altura": 1.70,
+    "Peso": 70.5,
+    "Id": 1
+}
+
+### Listar imc
+GET http://localhost:5208/api/imc/listar
+
+### Listar imc por aluno
+GET http://localhost:5208/api/imc/listarporaluno/{1}
+
+### Alterar o IMC
+PUT http://localhost:5208/api/imc/alterar/{1}
+Content-Type: application/json
+{
+    "Altura": 1.72,
+    "Peso": 70.5,
+    "Id": 1
+}
